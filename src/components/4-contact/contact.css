@@ -1,0 +1,145 @@
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contact-title .contact-icon{
+    color: var(--title-secondary);
+    margin:0.4rem;
+}
+.contact-title h1{
+    color: var(--title);
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.contact-title p{
+    color: var(--title-secondary);
+    font-size: 1rem;
+    margin: 0.5rem 0 1.5rem;
+    letter-spacing: 0.9pxpx;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30rem;
+}
+
+.contact-form form input{
+width: 50%;
+padding: 0.6rem;
+margin-bottom: 1rem;
+background-color: var(--bgHeader);
+border: 0;
+border-radius: 5px;
+    color: var(--title);
+
+transition: all 0.2s;
+}
+.contact-form form label{
+    width: 30%;
+}
+
+
+.contact-form form textarea{
+    background-color: var(--bgHeader);
+    min-height:10rem ;
+    width: 50%;
+    padding: 0.6rem;
+    resize: vertical;
+     overflow: auto;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    color: var(--title);
+    transition: all 0.2s;
+}
+
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-top: 1rem;
+}
+.contact-form form button{
+    color: var(--title);
+    font-weight: 100;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: var(--border);
+    border: 0;
+    padding: 0.7rem;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.contact-form form input, .contact-form form textarea, .contact-form form button{
+border: 1px solid rgb(63, 63, 70);
+
+}
+.contact-form form input:focus, .contact-form form textarea:focus{
+border: 1px solid rgb(45, 212, 191);
+
+}
+.contact-form form input:hover, .contact-form form textarea:hover, .contact-form form button:hover{
+border: 1px solid rgb(45, 212, 191);
+
+}
+.light .contact-form form input, .contact-form form textarea, .contact-form form button{
+border: 1px solid var(--border);
+
+}
+.light .contact-form form input:focus, .contact-form form textarea:focus{
+border: 1px solid #000;
+
+}
+.light .contact-form form input:hover, .contact-form form textarea:hover, .contact-form form button:hover{
+border: 1px solid #000;
+
+}
+
+
+
+@media (max-width: 740px){
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+     .contact-title{
+        text-align: center;
+     }
+     .contact-title h1{
+        font-size: 1.8rem;
+     }
+     .contact-form{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+     }
+     .contact-form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+     .contact-title div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        justify-content: center; 
+     }
+     .contact-form form{
+        width: 100%;
+        flex-direction: column;
+     }
+     .contact-form form input, .contact-form form textarea, .contact-form form button, .contact-form form label{
+         width: 100%;
+        width: 100%;
+     }
+     .contact-animation{
+        display: none;
+     }
+} 

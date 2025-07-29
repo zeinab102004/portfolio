@@ -1,0 +1,73 @@
+.hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 0 2.6rem;
+}
+.hero-contants{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero .title img {
+    border-radius: 50%;
+width: 6rem;
+height: 6rem;
+border: 1px solid orange;
+margin-bottom: 0.8rem;
+}
+.hero .title h1{
+    color: var(--title);
+margin-bottom: 1rem;
+font-size: 2.5rem;
+}
+.hero p{
+    font-size:0.9rem;
+    color: var(--title-secondary);
+}
+.hero-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.hero-icons a{
+    color: var(--title-secondary);
+    font-size: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.hero-icons a:hover{
+    color: var(--blu);
+    scale: 1.2;
+}
+
+@media(max-width: 650px){
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-contants {
+        align-items: center;
+    }
+
+    .hero .title h1 {
+        font-size: 1rem; /* تصغير العنوان شوية */
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .hero-icons {
+        justify-content: center;
+    }
+}

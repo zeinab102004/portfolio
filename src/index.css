@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: black;
+    --secondary: rgb(24, 24, 27);
+    --border: rgba(63, 63, 70, 0.4);
+    --title: white;
+    --title-secondary: rgba(161, 161, 170);
+    --bgHeader: rgb(39,39,42);
+    --blu:rgb(93, 188, 252);
+}
+
+.light{
+    --primary: rgb(250, 250, 250);
+    --secondary: rgb(255, 255, 255);
+    --border: rgba(202, 202, 202, 0.51);
+    --title: rgb(39 39 42);
+    --title-secondary: rgba(82, 82, 91);
+    --bgHeader: rgb(253,253,253);
+    --blu:rgb(0, 149, 246);
+}
+body{
+    color: white;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    background-color: var(--primary);
+}
+
+.container{
+    border: 2px solid var(--border);
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    padding:2rem 4.8rem;
+}
+.divider{
+    border-bottom: 1px solid var(--border);
+    margin:3rem 0;
+    width: calc(4.8rem + 100% + 4.8rem);
+    margin-left: -4.8rem;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    transition: all 0.2s;
+    color: var(--title);
+}
+
+.border{
+    border: 2px solid red;
+}
+button:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+button:active{
+    scale: 0.9;
+}
+
+.scroll-to-top{
+    position:fixed;
+    bottom: 2rem;
+    right:3%;
+    background-color:rgba(25, 118, 210, 0.8);
+    color: var(--title);
+    border-radius: 50%;
+    height: 2.7rem;
+    width: 2.7rem;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    transition: all 1s;
+}
+.scroll-to-top:hover{
+    background-color: rgb(25, 118, 210);
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 0.88rem;
+ }
+ 
+::-webkit-scrollbar-track {
+  border: 7px solid #292c3b;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background-color: #d4d4d8;
+  }
+ 
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 2px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ 
+/* for Firefox */
+ html {scrollbar-color: #9e4673 #3d4a59;} 
+
+
+
+@media (max-width: 1000px) {
+    .container{
+        width: 90%;
+        padding: 1rem 1rem;
+    }
+
+        .divider{
+    width: calc(1.7rem + 100% + 1.7rem);
+    margin-left: -1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 98%;
+        padding: 1rem 1rem;
+    }
+    
+    .divider{
+    width: calc(1.7rem + 100% + 1.7rem);
+    margin-left: -1.7rem;
+    }
+    .scroll-to-top{
+       opacity: 0.6;
+       width: 2.2rem;
+       height: 2.2rem;
+    }
+    
+}
