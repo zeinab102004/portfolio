@@ -14,44 +14,40 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const myProjects = [
   {
-    projectTitle: "react project",
-    category: "react",
-    imgPath: "./imges/1.jpg",
-  },
-  {
-    projectTitle: "HTML && Css project",
+    projectTitle: "Interactive Portfolio Gallery",
+    projectDec:
+      "A clean and responsive web portfolio showcasing a curated collection of projects or artworks. Features an intuitive layout and smooth navigation, designed to highlight creative work effectively across different devices.",
     category: "Css",
-    imgPath: "./imges/2.jpg",
+    imgPath: "./imges/1.jpg",
+    gitHub:"https://github.com/zeinab102004/cuorses.git",
+    linkDeploy:"https://inspiring-heliotrope-a62b82.netlify.app/"
   },
   {
-    projectTitle: "Css project",
+    projectTitle: "Edubridge",
+    projectDec:
+      "A clean and user-friendly website designed to offer online courses and educational content. It features organized course listings, easy navigation, and a responsive layout to provide a smooth learning experience across devices.",
+    category: "react",
+    imgPath: "./imges/2.jpg",
+    gitHub:"https://github.com/zeinab102004/edubridge.git",
+    linkDeploy:"https://resilient-travesseiro-c62942.netlify.app/"
+  },
+    {
+    projectTitle: "Responsive Navigation Bar",
+    projectDec:
+      "A clean and functional navigation bar component designed for websites. It features smooth animations, responsive behavior for different screen sizes, and easy accessibility to improve user navigation throughout the site.",
     category: "Css",
     imgPath: "./imges/3.jpg",
+    gitHub:"https://github.com/zeinab102004/navBar.git",
+    linkDeploy:"https://capable-starlight-6b5bfd.netlify.app/"
   },
-  {
-    projectTitle: "react project",
-    category: "react",
+    {
+    projectTitle: "Product Management CRUDS",
+    projectDec:
+      "A clean and intuitive product management web application that allows users to view, add, and manage products efficiently. Features a responsive design with organized layouts for easy navigation and seamless user interaction across devices.",
+    category: "javaScript",
     imgPath: "./imges/4.jpg",
-  },
-  {
-    projectTitle: "Css project",
-    category: "Css",
-    imgPath: "./imges/5.jpg",
-  },
-  {
-    projectTitle: "javaSctipt project",
-    category: "javaScript",
-    imgPath: "./imges/6.jpg",
-  },
-  {
-    projectTitle: "Node project",
-    category: "nodeJs",
-    imgPath: "./imges/7.jpg",
-  },
-  {
-    projectTitle: "JavaScript project",
-    category: "javaScript",
-    imgPath: "./imges/8.jpg",
+    gitHub:"https://github.com/zeinab102004/product-management.git",
+    linkDeploy:"https://bucolic-yeot-d43b20.netlify.app/"
   },
 ];
 export default function Main() {
@@ -127,7 +123,8 @@ export default function Main() {
                 });
                 setArr(newArr);
               }}
-              className={activeTab === "nodeJs" ? "active" : null} id="node"
+              className={activeTab === "nodeJs" ? "active" : null}
+              id="node"
             >
               NODE &EXPRESS
             </button>
@@ -136,77 +133,82 @@ export default function Main() {
       </div>
 
       <div className="projects">
-
         <AnimatePresence>
-        {arr.map((item) => {
-          return (
-            <MotionCard
-              layout
-              initial={{transform:"scale(0)"}}
-              animate={{transform:"scale(1)"}}
-              transition={{type:"spring", damping:8,stiffness:50}}
-              key={item.imgPath}
-              className="card"
-              sx={{
-                maxWidth: 345,
-                marginBottom: "1rem",
-                backgroundColor: "var(--bgHeader)",
-              }}
-            >
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={item.imgPath}
-                  alt="green iguana"
-                />
-                <CardContent className="card-content">
-                  <Typography
-                    className="title-project"
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    sx={{ color: "var(--title)" }}
-                  >
-                    {item.projectTitle}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: "var(--title-secondary)" }}
-                  >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
+          {arr.map((item) => {
+            return (
+              <MotionCard
+                layout
+                initial={{ transform: "scale(0)" }}
+                animate={{ transform: "scale(1)" }}
+                transition={{ type: "spring", damping: 8, stiffness: 50 }}
+                key={item.imgPath}
+                className="card"
+                sx={{
+                  maxWidth: 345,
+                  marginBottom: "1rem",
+                  backgroundColor: "var(--bgHeader)",
                 }}
               >
-                <div className="project-icons">
-                  <Button className="link" size="small" sx={{ color: "white" }}>
-                    <LinkIcon />
-                  </Button>
-                  <Button className="link" size="small" sx={{ color: "white" }}>
-                    <GitHubIcon />
-                  </Button>
-                </div>
-                <div className="more">
-                  <Button
-                    size="small"
-                    sx={{ color: "var(--blu)", fontSize: "0.7rem" }}
-                  >
-                    Share <ArrowForwardIcon style={{ fontSize: "0.7rem" }} />
-                  </Button>
-                </div>
-              </CardActions>
-            </MotionCard>
-          );
-        })
-        }</AnimatePresence>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={item.imgPath}
+                    alt="green iguana"
+                  />
+                  <CardContent className="card-content">
+                    <Typography
+                      className="title-project"
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ color: "var(--title)" }}
+                    >
+                      {item.projectTitle}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "var(--title-secondary)" }}
+                    >
+                   {item.projectDec}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div className="project-icons">
+                    <Button
+                      className="link"
+                      size="small"
+                      sx={{ color: "white" }}
+                    >
+                      <a target="blank" href={item.linkDeploy}><LinkIcon /></a>
+                    </Button>
+                    <Button
+                      className="link"
+                      size="small"
+                      sx={{ color: "white" }}
+                    >
+                      <a target="blank" href={item.gitHub}><GitHubIcon /></a>
+                    </Button>
+                  </div>
+                  <div className="more">
+                    <Button
+                      size="small"
+                      sx={{ color: "var(--blu)", fontSize: "0.7rem" }}
+                    >
+                      Share <ArrowForwardIcon style={{ fontSize: "0.7rem" }} />
+                    </Button>
+                  </div>
+                </CardActions>
+              </MotionCard>
+            );
+          })}
+        </AnimatePresence>
       </div>
     </div>
   );
