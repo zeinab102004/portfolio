@@ -99,7 +99,10 @@ border: 1px solid #000;
 border: 1px solid #000;
 
 }
-
+.lott{
+    color:red !important;
+    outline: 1px solid red;
+}
 
 
 @media (max-width: 740px){

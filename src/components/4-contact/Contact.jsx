@@ -82,10 +82,10 @@ export default function Contact() {
                 {state.submitting?"submitting......":"send massage"}
                 </button>
             </div>
-          {state.succeeded && (<p style={{
+          {state.succeeded && (<p  style={{color:"var(--title)",
             fontSize:"18px", marginTop:"1.7rem", display:"flex",justifyContent:"center",alignItems:"center"
           }}>
-            <Lottie loop={false} style={{height:55}} animationData={Done} />
+            <Lottie  loop={false} style={{height:55}} animationData={Done} />
             Your massage has been send successfully</p>
             )}
           </form>

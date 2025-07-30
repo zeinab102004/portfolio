@@ -127,7 +127,7 @@ export default function Main() {
                 });
                 setArr(newArr);
               }}
-              className={activeTab === "nodeJs" ? "active" : null}
+              className={activeTab === "nodeJs" ? "active" : null} id="node"
             >
               NODE &EXPRESS
             </button>
